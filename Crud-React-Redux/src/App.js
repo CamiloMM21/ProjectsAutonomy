@@ -1,5 +1,5 @@
 import './App.css';
-import{useSelector} from  "react-redux"
+
 import TaskForem from './components/TaskForem';
 import TasKsList from './components/TasKsList';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -8,7 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   
   return (
-    <div className="bg-zinc-900 h-scren text-white " >
+
+<div className="bg-zinc-900 h-scren text-white " >
     <div className='flex items-center justify-center h-full'>
     <BrowserRouter>
     <Routes>
@@ -21,8 +22,8 @@ function App() {
     </Routes>
     </BrowserRouter>
     </div>
-    
     </div>
+
    
   );
 }

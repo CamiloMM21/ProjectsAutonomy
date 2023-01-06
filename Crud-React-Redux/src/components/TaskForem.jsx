@@ -20,12 +20,7 @@ const dispach = useDispatch();
 const Paramas = useParams;
 
  
- useEffect(() => {
-    if (Paramas.id){
-        setTask(tasks.find((task) => task.id === Paramas.id))
 
-    }
-    }, [])
 
 const  handleChan =(e) =>{
     setTask({
@@ -47,12 +42,21 @@ const handleSubmit =(e)=>{
 }
   navigate("/create.task")
 
-} ;   
+} ;  
+  useEffect(() => {
+    if (Paramas.id){
+        setTask(tasks.find((task) => task.id === Paramas.id))
+
+    }
+    }, [Paramas.id, tasks])
   return (
-    <form  onSubmit={handleSubmit}>
-        <input name="title" placeholder='title' onChange={handleChan} value={task.title}/>
-        <textarea name="description" placeholder='description' onChange={handleChan} value={task.description}></textarea>
-        <button>save</button>
+    <form  onSubmit={handleSubmit} className='bg-zinc-800 max-w-sm p-4 mb-2'>
+      <label htmlFor="title" className='block text-xs font-bold '>Task:</label>
+        <input name="title" placeholder='title' onChange={handleChan} value={task.title} className='w-full p-2 rounded-md bg-zinc-600 mb-2'/>
+
+        <label htmlFor="description" className='block text-xs font-bold mb-2'>Description:</label>
+        <textarea name="description" placeholder='description' onChange={handleChan} value={task.description} className='w-full p-2 rounded-md bg-zinc-600 mb-2'></textarea>
+        <button className='bg-indigo-600 px-2 py-1'>save</button>
     </form>
   )
 
