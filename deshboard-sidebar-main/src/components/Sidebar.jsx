@@ -49,19 +49,19 @@ const Sidebar = ({children}) => {
     ]
     return (
         <div className="flex">
-           <div style={{width: isOpen ? "200px" : "50px"}} className="bg-black text-white h-[45vh] w-[200px]
-           ease-[]">
-               <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+           <div style={{width: isOpen ? "200px" : "50px"}} className="bg-black text-white h-[44vh] w-[200px]
+           ease-[] opacity-80 ease-out duration-300 rounded-br-lg">
+               <div className="flex items-center pl-2 pb-6 ">
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="text-[30px]">Logo</h1>
+                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="flex text-2xl hover:text-cyan-600 pt-2 ml-[50px]">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>
                {
                    menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassName="active">
+                       <NavLink to={item.path} key={index} className="flex  text-white pl-2 gap-2 font-medium text-xl pb-6 transition duration-300 hover:bg-cyan-600 hover:text-black" activeclassName="active">
                            <div className="icon">{item.icon}</div>
-                           <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
+                           <div style={{display: isOpen ? "block" : "none"}} className="text-[20px]">{item.name}</div>
                        </NavLink>
                    ))
                }
