@@ -11,17 +11,18 @@ import Sidebar from './components/Sidebar';
 function App() {
   return (
     <BrowserRouter>
-    <Sidebar>
+    
     <Routes>
-      
+      <Sidebar>
       <Route path='/' element={<Dashboard/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/list' element={<List/>}/>
       <Route path='/product' element={<Product/>}/>
       <Route path='/analytics' element={<Analytics/>}/>
       <Route path='/comment' element={<Comment/>}/>
-      </Routes>
       </Sidebar>
+      </Routes>
+      
       </BrowserRouter>
   
   );

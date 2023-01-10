@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App.css';
+import './css/style.css';
 import App from './App';
 
 
@@ -10,4 +10,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
