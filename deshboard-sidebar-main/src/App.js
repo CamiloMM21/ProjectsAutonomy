@@ -9,10 +9,12 @@ import Comment from './pages/Comment.jsx';
 import Product from './pages/Product.jsx';
 import ProductList from './pages/ProductList.jsx';
 
+
 const App = () => {
   return (
     <BrowserRouter>
-      <Sidebar>
+    <Sidebar>
+      
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
@@ -22,7 +24,8 @@ const App = () => {
           <Route path="/product" element={<Product />} />
           <Route path="/productList" element={<ProductList />} />
         </Routes>
-      </Sidebar>
+     </Sidebar>
+      
     </BrowserRouter>
   );
 };

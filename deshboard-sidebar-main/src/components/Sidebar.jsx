@@ -48,12 +48,13 @@ const Sidebar = ({children}) => {
         }
     ]
     return (
-        <div className="flex">
+        
+        <div className="flex   ">
            <div style={{width: isOpen ? "200px" : "50px"}} className="bg-black text-white h-[44vh] w-[200px]
            ease-[] opacity-80 ease-out duration-300 rounded-br-lg">
-               <div className="flex items-center pl-2 pb-6 ">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="text-[30px]">Logo</h1>
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="flex text-2xl hover:text-cyan-600 pt-2 ml-[50px]">
+               <div className="flex items-center pl-2 pb-6  ">
+                   <h1 style={{display: isOpen ? "block" : "none"}} className=" text-[30px]">Logo</h1>
+                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="flex text-2xl hover:text-cyan-600 pt-2 ml-[50px] ">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>
@@ -67,6 +68,7 @@ const Sidebar = ({children}) => {
                }
            </div>
            <main className='w-[100%] p-[20px]'>{children}</main>
+         
         </div>
     );
 };
