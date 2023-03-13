@@ -7,6 +7,7 @@ export const createUser = async (req, res) => {
         // const result = await pool.query(`INSERT INTO users(name) VALUES('${name}')`);
         // res.json(result);
         const result = await pool.query(`call spInsertarUser('${name}')`)
+       
     } catch ( error ) {
         message(error.message, "danger");
         res.status(500);
